@@ -77,3 +77,48 @@ for(const dog of dogs){
 // Now that you have a new note object, add that new object to the end of your notes array with the push() method. Make sure you write this code before the console.log() 
 //so that all of your notes will be displayed in the terminal.
 
+// ---------------------------------------------------------------------
+// Journal
+
+// Note 1
+// 7/16/2021
+// I am sick again today, this has slowed me down.
+// Today I learned about Unique Identifiers and Creating arrays.
+// I spend 3 hours on book 2 and completed through chaper 4.
+
+// Note 2
+// 7/19/2021
+// I am feeling much better, I now just have an annoying cough.
+// Today I worked on chapter 6 and 7
+// Displaying toy properties
+// for...of loops
+// string interpolation
+// Push() 
+// Spent 2.5 hours
+
+const notes = [
+    {
+        id: 1,
+        date: "7/16/2021",
+        feeling: "I am sick again today, this has slowed me down.",
+        lessons: "Today I learned about Unique Identifiers and Creating arrays.",
+        time: "I spent 3 hours on book 2 and completed through chaper 4"
+    },
+    {
+        id: 2,
+        date: "7/19/2021",
+        feeling: "I am feeling much better, I now just have an annoying cough.",
+        lessons: "Today I worked on chapter 6 and 7, Displaying toy properties, for...of loops, string interpolation, Push(),",
+        time: "Spent 2.5 hours"
+
+    }
+]
+for (const note of notes) {
+    console.log(`Note ${note.id}
+Date is ${note.date}
+Feeling is ${note.feeling}
+What I learned is ${note.lessons}
+How long is studied ${note.time}
+---------------------------------
+`)
+}
