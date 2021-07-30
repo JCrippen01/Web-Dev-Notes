@@ -165,11 +165,13 @@ const note2 = {
     date: "7/30/2021",
     feeling: "good",
     feelingNote: "Just adding a second entry.",
-    lessons: "Yea you push it , yeah you push it, push it.",
-    time: "!Static X"
+    lessons: "Yea push it , yeah push it real good!",
+    time: "TLC X"
 }
 
 const createNote = (noteObject) => {
+    const dateCreated = Date.now()
+    noteObject.dateCreated = dateCreated  
 
     const lastIndex = notes.length - 1
     const currentLastNote = notes[lastIndex]
@@ -183,6 +185,7 @@ createNote(note1)
 createNote(note2)
 
 for (note of notes) {
+    note.dateCreated = Date.now()
     console.log (notes)
 }
 
