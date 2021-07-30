@@ -100,20 +100,32 @@ const notes = [
     {
         id: 1,
         date: "7/16/2021",
-        feeling: "I am sick again today, this has slowed me down.",
+        feeling: "poor",
+        feelingNote: "I am sick again today, this has slowed me down.",
         lessons: "Today I learned about Unique Identifiers and Creating arrays.",
         time: "I spent 3 hours on book 2 and completed through chaper 4"
     },
     {
         id: 2,
         date: "7/19/2021",
-        feeling: "I am feeling much better, I now just have an annoying cough.",
+        feeling: "ok",
+        feelingNote: "I am feeling much better, I now just have an annoying cough.",
         lessons: "Today I worked on chapter 6 and 7, Displaying toy properties, for...of loops, string interpolation, Push(),",
         time: "Spent 2.5 hours"
-
+    },
+    {
+        id: 3,
+        date: "7/19/2021",
+        feeling: "good",
+        feelingNote: "I feel like I am moving much faster now.",
+        lessons: "After lunch I worked on chapters 7,8,9 all assingnemts.",
+        time: "Spent 1 hours"
     }
 ]
+
+const searchTerm = "poor"
 for (const note of notes) {
+    if (note.feeling === searchTerm) {
     console.log(`Note ${note.id}
 Date is ${note.date}
 Feeling is ${note.feeling}
@@ -121,4 +133,61 @@ What I learned is ${note.lessons}
 How long is studied ${note.time}
 ---------------------------------
 `)
+    }
 }
+
+//Chapter 9 Notes section:
+// Finding a Note
+// In this chapter, you need to define a variable named searchTerm. It's value can be the value of any property value you like from your notes. For example, if one of your notes has a feeling property whose value is "Compunctious", you're variable declaration would be the code below.
+
+// const searchTerm = "Compunctious"
+// Use that search term in your for..of loop to output only the object that has the value for the corresponding property.
+
+// Here is boilerplate code. You need to enter in the proper condition for the if code block. Refer back to the code you wrote for Leonid's toys since you won't remember this code yet.
+
+// It take a long time to do it from memory.
+
+// for (const note of notes) {
+//     if () {
+
+//     }
+// }
+
+const note1 = { 
+    date: "7/30/2021",
+    feeling: "great",
+    feelingNote: "slow and steady.",
+    lessons: "learning to push up.",
+    time: "working in 25 min bursts"
+}
+
+const note2 = {
+    date: "7/30/2021",
+    feeling: "good",
+    feelingNote: "Just adding a second entry.",
+    lessons: "Yea you push it , yeah you push it, push it.",
+    time: "!Static X"
+}
+
+const createNote = (noteObject) => {
+
+    const lastIndex = notes.length - 1
+    const currentLastNote = notes[lastIndex]
+    const maxId = currentLastNote.id
+    const idForNewNote = maxId + 1
+ noteObject.id = idForNewNote
+ notes.push(noteObject)
+}
+
+createNote(note1)
+createNote(note2)
+
+for (note of notes) {
+    console.log (notes)
+}
+
+
+
+
+
+
