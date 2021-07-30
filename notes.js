@@ -189,7 +189,7 @@ for (note of notes) {
     console.log (notes)
 }
 
-
+//Scott helped build the UTC code using Date.now Method. When you render, you can then use the UTC to output
 
 
 
